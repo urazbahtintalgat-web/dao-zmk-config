@@ -107,19 +107,19 @@
 
         default_layer {
             bindings = <
-&kp GRAVE          &kp Q       &kp W       &kp E        &kp R           &kp T        &kp Y        &kp U           &kp I        &kp O       &kp P          &kp LEFT_BRACKET
-&kp RIGHT_BRACKET  &mt LCMD A  &mt LALT S  &mt LCTRL D  &mt LSHFT F     &kp G        &kp H        &mt RSHFT J     &mt RCTRL K  &mt RALT L  &mt RGUI SEMI  &kp APOSTROPHE
-&kp MINUS          &kp Z       &kp X       &kp C        &kp V           &kp B        &kp N        &kp M           &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                                           &lt FUN ESC  &lt IDEA SPACE  &lt NUM TAB  &lt NUM RET  &mt RSHFT BSPC  &lt FUN DEL
+&kp GRAVE          &kp Q               &kp W       &kp E               &kp R           &kp T        &kp Y        &kp U           &kp I                &kp O       &kp P                   &kp LEFT_BRACKET
+&kp RIGHT_BRACKET  &mt LEFT_CONTROL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LSHFT F     &kp G        &kp H        &mt RSHFT J     &mt RIGHT_COMMAND K  &mt RALT L  &mt RIGHT_CONTROL SEMI  &kp APOSTROPHE
+&kp MINUS          &kp Z               &kp X       &kp C               &kp V           &kp B        &kp N        &kp M           &kp COMMA            &kp DOT     &kp FSLH                &kp BSLH
+                                                   &lt FUN ESC         &lt IDEA SPACE  &lt NUM TAB  &lt NUM RET  &mt RSHFT BSPC  &lt FUN DEL
             >;
         };
 
         num_layer {
             bindings = <
-&kp C_BRI_UP  &kp LBKT       &kp N7       &kp N8        &kp N9        &kp RBKT   &kp LS(LG(Z))  &kp LG(V)       &kp LG(C)       &kp LG(X)    &kp LG(Z)       &kp C_VOL_UP
-&kp C_BRI_DN  &mt LCMD LPAR  &mt LALT N4  &mt LCTRL N5  &mt LSHFT N6  &kp EQUAL  &kp CAPS       &mt RSHFT LEFT  &mt RCTRL DOWN  &mt RALT UP  &mt RGUI RIGHT  &kp C_VOL_DN
-&kp C_PP      &kp GRAVE      &kp N1       &kp N2        &kp N3        &kp BSLH   &kp INS        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP  &kp END         &kp C_MUTE
-                                          &kp DOT       &kp N0        &kp MINUS  &kp KP_LPAR    &kp KP_RPAR     &kp MINUS
+&kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp N7        &kp N8        &kp N9        &kp EQUAL     &kp LS(LG(Z))       &kp LG(V)           &kp LG(C)           &kp LG(X)         &kp LG(Z)            &kp ESCAPE
+&kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kt NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &kp LG(LEFT_ARROW)  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &kp RG(RIGHT_ARROW)
+&kp LC(SPACE)         &kp GRAVE              &kp N1        &kp N2        &kp N3        &kp BSLH      &kp LA(LEFT_ARROW)  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp RS(UP_ARROW)  &kp RS(RIGHT_ARROW)  &kp RA(RIGHT_ARROW)
+                                                           &none         &none         &none         &kp SPACE           &kp BACKSPACE       &kp DELETE
             >;
         };
 
@@ -147,6 +147,15 @@
 &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
 &sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
                                          &trans        &none         &trans        &trans        &none         &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&kp C_BRI_UP  &kp LBKT       &kp N7       &kp N8        &kp N9        &kp RBKT   &kp LS(LG(Z))  &kp LG(V)       &kp LG(C)       &kp LG(X)    &kp LG(Z)       &kp C_VOL_UP
+&kp C_BRI_DN  &mt LCMD LPAR  &mt LALT N4  &mt LCTRL N5  &mt LSHFT N6  &kp EQUAL  &kp CAPS       &mt RSHFT LEFT  &mt RCTRL DOWN  &mt RALT UP  &mt RGUI RIGHT  &kp C_VOL_DN
+&kp C_PP      &kp GRAVE      &kp N1       &kp N2        &kp N3        &kp BSLH   &kp INS        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP  &kp END         &kp C_MUTE
+                                          &kp DOT       &kp N0        &kp MINUS  &kp KP_LPAR    &kp KP_RPAR     &kp MINUS
             >;
         };
     };
