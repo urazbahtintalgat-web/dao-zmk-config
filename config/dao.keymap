@@ -135,8 +135,8 @@
 
         mouse_movement_layer {
             bindings = <
-&kp ESCAPE  &none             &kp LC(LEFT_ARROW)   &mmv MOVE_Y(-1200)  &kp LC(RIGHT_ARROW)  &none  &none  &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_LEFT  &none  &none
-&none       &kp LC(UP_ARROW)  &mmv MOVE_X(-1200)   &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)    &none  &none  &mkp LCLK        &mkp RCLK       &mkp MCLK       &none  &none
+&kp ESCAPE  &none             &kp LC(LEFT_ARROW)   &mmv MOVE_Y(-1500)  &kp LC(RIGHT_ARROW)  &none  &none  &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_LEFT  &none  &none
+&none       &kp LC(UP_ARROW)  &mmv MOVE_X(-1500)   &mmv MOVE_Y(1500)   &mmv MOVE_X(1500)    &none  &none  &mkp LCLK        &mkp RCLK       &mkp MCLK       &none  &none
 &none       &none             &none               &none              &none               &none  &none  &none            &msc SCRL_UP    &none           &none  &none
                                                    &none              &none               &none  &none  &none            &none
             >;
