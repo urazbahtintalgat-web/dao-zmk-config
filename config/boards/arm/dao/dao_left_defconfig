@@ -40,3 +40,6 @@ CONFIG_ZMK_USB=y
 CONFIG_ZMK_BLE=y
 
 CONFIG_PINCTRL=n
+
+# Enable mouse / pointing support
+CONFIG_ZMK_POINTING=y
