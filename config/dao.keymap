@@ -101,6 +101,16 @@
             key-positions = <3 4>;
             bindings = <&kp DEL>;
         };
+
+        go_to_mouse_layer {
+            bindings = <&to 2>;
+            key-positions = <0 37>;
+        };
+
+        gaming_mode {
+            bindings = <&to 4>;
+            key-positions = <4 5 6 7>;
+        };
     };
 
     keymap {
@@ -111,7 +121,7 @@
 &kp GRAVE          &kp Q               &kp W       &kp E               &kp R        &kp T      &kp Y      &kp U           &kp I                &kp O       &kp P                   &kp LEFT_BRACKET
 &kp RIGHT_BRACKET  &mt LEFT_CONTROL A  &mt LALT S  &mt LEFT_COMMAND D  &mt LSHFT F  &kp G      &kp H      &mt RSHFT J     &mt RIGHT_COMMAND K  &mt RALT L  &mt RIGHT_CONTROL SEMI  &kp APOSTROPHE
 &kp MINUS          &kp Z               &kp X       &kp C               &kp V        &kp B      &kp N      &kp M           &kp COMMA            &kp DOT     &kp FSLH                &kp BSLH
-                                                   &lt 5 ESC           &lt 3 SPACE  &lt 1 TAB  &lt 1 RET  &mt RSHFT BSPC  &lt 5 DEL
+                                                   &lt 6 ESC           &lt 2 SPACE  &lt 1 TAB  &lt 1 RET  &mt RSHFT BSPC  &lt 6 DEL
             >;
         };
 
@@ -124,30 +134,39 @@
             >;
         };
 
-        movement_layer {
+        mouse_movement_layer {
             bindings = <
-&kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp N7        &kp N8        &kp N9        &kp EQUAL     &kp LS(LG(Z))       &kp LG(V)           &kp LG(C)           &kp LG(X)         &kp LG(Z)            &kp ESCAPE
-&kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kt NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &kp LG(LEFT_ARROW)  &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &kp RG(RIGHT_ARROW)
-&kp LC(SPACE)         &kp GRAVE              &kp N1        &kp N2        &kp N3        &kp BSLH      &kp LA(LEFT_ARROW)  &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)  &kp RS(UP_ARROW)  &kp RS(RIGHT_ARROW)  &kp RA(RIGHT_ARROW)
-                                                           &none         &none         &none         &kp SPACE           &kp BACKSPACE       &kp DELETE
+&to 0  &none             &kp LC(LEFT_ARROW)  &mmv MOVE_Y(-1300)  &kp LC(RIGHT_ARROW)  &kp C_VOLUME_UP  &kp LG(LS(T))  &msc SCRL_RIGHT       &msc SCRL_DOWN  &msc SCRL_LEFT         &none        &kp LG(LC(LS(NUMBER_4)))
+&none  &kp LC(UP_ARROW)  &mmv MOVE_X(-1300)  &mmv MOVE_Y(1300)   &mmv MOVE_X(1300)    &kp C_VOL_DN     &kp LG(T)      &mkp LCLK             &mkp RCLK       &mkp MCLK              &kp LG(TAB)  &none
+&none  &none             &none               &none               &none                &none            &none          &kp LG(LEFT_BRACKET)  &msc SCRL_UP    &kp LG(RIGHT_BRACKET)  &none        &none
+                                             &none               &none                &none            &none          &none                 &none
             >;
         };
 
-       mouse_movement_layer {
+        prog_layer {
             bindings = <
-&to 0  &to 3           &kp LC(LEFT_ARROW)  &mmv MOVE_Y(-1300)  &kp LC(RIGHT_ARROW)  &none  &none  &msc SCRL_RIGHT  &msc SCRL_DOWN  &msc SCRL_LEFT  &none  &none
-&none  &kp LC(UP_ARROW) &mmv MOVE_X(-1300)  &mmv MOVE_Y(1300)   &mmv MOVE_X(1300)    &none  &none  &mkp LCLK        &mkp RCLK       &mkp MCLK       &none  &none
-&none  &none            &none               &none               &none                &none  &none  &none            &msc SCRL_UP    &none           &none  &none
-                                        &none               &none                &none  &none  &none            &none
+&none      &kp LC(GRAVE)     &none         &none             &none           &none      &none  &kp LA(LG(LEFT_ARROW))  &kp UP_ARROW    &kp LA(LG(RIGHT_ARROW))  &none          &none
+&kp LG(A)  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_SHIFT  &kp LG(F)  &none  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp LC(TAB)    &none
+&none      &kp LG(Z)         &kp LG(X)     &kp LG(C)         &kp LG(V)       &none      &none  &none                   &none           &none                    &kp LG(SLASH)  &none
+                                           &none             &none           &none      &none  &none                   &none
             >;
         };
 
-        idea_layer {
+        gaming_layer {
             bindings = <
-&trans  &trans     &kp LA(LG(L))  &kp LG(E)  &kp LC(LA(R))  &kp LC(LA(D))  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(Z)  &kp LG(X)      &kp LG(C)  &kp LG(V)      &kp LS(LG(Z))  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans         &kp LC(T)  &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans
-                                  &trans     &trans         &trans         &trans  &trans  &trans
+&kp ESCAPE    &kp LEFT_CONTROL  &kp Q  &kp W  &kp E      &kp R        &none  &none  &none  &none  &none  &to 0
+&kp TAB       &kp LEFT_SHIFT    &kp A  &kp S  &kp D      &kp F        &none  &none  &none  &none  &none  &none
+&kp LEFT_ALT  &kp Z             &kp X  &kp C  &kp V      &kp G        &none  &none  &none  &none  &none  &none
+                                       &sl 5  &kp SPACE  &lt 1 ENTER  &none  &none  &none
+            >;
+        };
+
+        gaming_layer_2 {
+            bindings = <
+&none  &none  &kp Y  &kp U  &kp I  &kp T  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &kp H  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &kp B  &none  &none  &none  &none  &none  &none
+                     &none  &none  &none  &none  &none  &none
             >;
         };
 
@@ -156,7 +175,7 @@
 &kp KP_NUM  &kp F12       &kp F7       &kp F8        &kp F9        &kp PSCRN        &kp RBRC     &kp LPAR         &kp STAR         &kp AMPS       &kp LBRC        &kp C_VOL_UP
 &kp EQUAL   &mt LCMD F11  &mt LALT F4  &mt LCTRL F5  &mt LSHFT F6  &kp SLCK         &kp PLUS     &mt RSHFT CARET  &mt RCTRL PRCNT  &mt RALT DLLR  &mt RGUI COLON  &kp C_MUTE
 &kp LALT    &kp F10       &kp F1       &kp F2        &kp F3        &kp PAUSE_BREAK  &kp PIPE     &kp HASH         &kp AT           &kp EXCL       &kp TILDE       &kp C_VOL_DN
-                                       &trans        &trans        &lt 6 RET        &lt 6 UNDER  &kp RPAR         &kp LPAR
+                                       &trans        &trans        &lt 7 RET        &lt 7 UNDER  &kp RPAR         &kp LPAR
             >;
         };
 
@@ -169,12 +188,12 @@
             >;
         };
 
-        layer_7 {
+        idea_layer {
             bindings = <
-&none         &none          &none        &none         &none         &none      &kp LS(LG(Z))  &kp LG(V)       &kp LG(C)       &kp LG(X)    &kp LG(Z)       &kp C_VOL_UP
-&kp C_BRI_DN  &mt LCMD LPAR  &mt LALT N4  &mt LCTRL N5  &mt LSHFT N6  &kp EQUAL  &kp CAPS       &mt RSHFT LEFT  &mt RCTRL DOWN  &mt RALT UP  &mt RGUI RIGHT  &kp C_VOL_DN
-&kp C_PP      &kp GRAVE      &kp N1       &kp N2        &kp N3        &kp BSLH   &kp INS        &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP  &kp END         &kp C_MUTE
-                                          &kp DOT       &kp N0        &kp MINUS  &kp KP_LPAR    &kp KP_RPAR     &kp MINUS
+&trans  &trans     &kp LA(LG(L))  &kp LG(E)  &kp LC(LA(R))  &kp LC(LA(D))  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(Z)  &kp LG(X)      &kp LG(C)  &kp LG(V)      &kp LS(LG(Z))  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans         &kp LC(T)  &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans     &trans         &trans         &trans  &trans  &trans
             >;
         };
     };
